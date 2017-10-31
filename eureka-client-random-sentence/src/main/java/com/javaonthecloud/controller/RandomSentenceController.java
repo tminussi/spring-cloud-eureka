@@ -15,10 +15,6 @@ public class RandomSentenceController {
 
     @GetMapping("/")
     public String getSentences() {
-<<<<<<< HEAD
-        System.out.println(sentences);
-=======
->>>>>>> b8c1d8d5a4ce139a44e7b410ff117c1f10397452
         String[] sentencesArray = sentences.split(":");
         int i = (int)Math.round(Math.random() * (sentencesArray.length - 1));
         return sentencesArray[i];

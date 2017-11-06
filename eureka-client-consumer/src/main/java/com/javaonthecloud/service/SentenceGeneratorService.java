@@ -21,7 +21,7 @@ public class SentenceGeneratorService {
         this.sentenceClient = sentenceClient;
     }
 
-    @HystrixCommand(fallbackMethod = "getSentenceFromHystrisx")
+    @HystrixCommand(fallbackMethod = "getSentenceFromHystrix")
     public String generateSentence() {
         return "Sentence: " + this.sentenceClient.getSentence() + ". Author: " + this.authorClient.getAuthor();
     }

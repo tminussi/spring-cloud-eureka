@@ -6,10 +6,10 @@ import org.springframework.web.bind.annotation.GetMapping;
 /**
  * Created by thales on 31/10/17.
  */
-@FeignClient("AUTHOR-GENERATOR")
+@FeignClient("api-gateway/")
 public interface AuthorClient {
 
-    @GetMapping(value = "/", consumes = "application/json")
+    @GetMapping(value = "author-generator", consumes = "application/json")
     String getAuthor();
 
 }

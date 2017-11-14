@@ -6,10 +6,10 @@ import org.springframework.web.bind.annotation.GetMapping;
 /**
  * Created by thales on 31/10/17.
  */
-@FeignClient("SENTENCE-GENERATOR")
+@FeignClient("api-gateway/")
 public interface SentenceClient {
 
-    @GetMapping(value = "/", consumes = "application/json")
+    @GetMapping(value = "sentence-generator", consumes = "application/json")
     String getSentence();
 
 }

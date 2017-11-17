@@ -6,7 +6,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 /**
  * Created by thales on 31/10/17.
  */
-@FeignClient("api-gateway/")
+@FeignClient(value = "api-gateway")
 public interface AuthorClient {
 
     @GetMapping(value = "author-generator", consumes = "application/json")
